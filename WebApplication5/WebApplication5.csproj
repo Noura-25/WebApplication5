@@ -168,7 +168,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\EditorController.cs" />
+    <Compile Include="Controllers\PostsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\UserController.cs" />
@@ -186,6 +186,18 @@
     <Compile Include="Migrations\202105222034216_PostAndFavoriteAndQuestion.cs" />
     <Compile Include="Migrations\202105222034216_PostAndFavoriteAndQuestion.Designer.cs">
       <DependentUpon>202105222034216_PostAndFavoriteAndQuestion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105240303272_posts.cs" />
+    <Compile Include="Migrations\202105240303272_posts.Designer.cs">
+      <DependentUpon>202105240303272_posts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105240332266_posts1.cs" />
+    <Compile Include="Migrations\202105240332266_posts1.Designer.cs">
+      <DependentUpon>202105240332266_posts1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105240445535_p.cs" />
+    <Compile Include="Migrations\202105240445535_p.Designer.cs">
+      <DependentUpon>202105240445535_p.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -263,7 +275,10 @@
     <Content Include="Views\User\viewerlayout.cshtml" />
     <Content Include="Views\Shared\_navbar.cshtml" />
     <Content Include="Views\User\test.cshtml" />
-    <Content Include="Views\Editor\AddPosts.cshtml" />
+    <Content Include="Views\Posts\AddPosts.cshtml" />
+    <Content Include="Views\Posts\View.cshtml" />
+    <Content Include="Views\Posts\DisplayInfo.cshtml" />
+    <Content Include="Views\Posts\Posts.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -290,6 +305,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105222034216_PostAndFavoriteAndQuestion.resx">
       <DependentUpon>202105222034216_PostAndFavoriteAndQuestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105240303272_posts.resx">
+      <DependentUpon>202105240303272_posts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105240332266_posts1.resx">
+      <DependentUpon>202105240332266_posts1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105240445535_p.resx">
+      <DependentUpon>202105240445535_p.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -18,8 +18,13 @@ namespace WebApplication5.Models
             Questions = new HashSet<Question>();
         }
 
+
+       
+
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        
+     
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int post_id { get; set; }
 
         [StringLength(20)]
@@ -38,8 +43,8 @@ namespace WebApplication5.Models
 
         public bool? Approve { get; set; }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Likes { get; set; }
+      
+        public int? Likes { get; set; }
 
         public int? Dislikes { get; set; }
 

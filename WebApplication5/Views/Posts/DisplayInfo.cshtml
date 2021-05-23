@@ -1,0 +1,55 @@
+﻿@model  WebApplication5.Models.Editor
+
+@{
+    ViewBag.Title = "DisplayInfo";
+}
+
+<h2>DisplayInfo</h2>
+
+<div>
+    <h4>Editor</h4>
+    <hr />
+
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Password)
+        </dt>
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PhoneNO)
+        </dt>
+
+      
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Photo)
+        </dt>
+
+
+
+
+
+
+    </dl>
+</div>
+        <p>
+            @Html.ActionLink("Back to List", "Index")
+        </p>
+    

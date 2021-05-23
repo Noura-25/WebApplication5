@@ -29,7 +29,7 @@ namespace WebApplication5.Models
         public virtual DbSet<Favorite> Favorites { get; set; }
 
         public virtual DbSet<Post> Posts { get; set; }
-
+       
         public virtual DbSet<Question> Questions { get; set; }
 
 

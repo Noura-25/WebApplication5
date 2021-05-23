@@ -20,6 +20,7 @@ namespace WebApplication5.Controllers
         [HttpPost]
         public ActionResult Register(Viewer viewer, Admin admin, Editor editor)
         {
+            
 
             if (db.Viewers.Any(X => X.username == viewer.username))
             {
