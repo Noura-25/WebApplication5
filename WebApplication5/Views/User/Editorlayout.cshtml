@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>@ViewBag.Title - My ASP.NET EditorLayout</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <style>
+        /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+        .row.content {
+            height: 1500px
+        }
+
+        /* Set gray background color and 100% height */
+        .sidenav {
+            background-color: #f1f1f1;
+            height: 100%;
+        }
+
+        /* Set black background color, white text and some padding */
+        footer {
+            background-color: #555;
+            color: white;
+            padding: 15px;
+        }
+
+        /* On small screens, set height to 'auto' for sidenav and grid */
+        @@media screen and (max-width: 1000px) {
+            .sidenav {
+                height: 0%;
+                padding: 30px;
+                padding-top: 100%;
+           
+               
+            }
+
+            .row.content {
+                height: auto;
+            }
+        }
+
+        footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+
+        header {
+            width: 100%;
+           
+            background-color: black;
+            color: white;
+            text-align: right;
+            height: 80%;
+            padding-left: 100%;
+     
+            margin-left: 17%;
+        }
+    </style>
+
+
+</head>
+<body>
+    <header>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            <div class="container-fluid">
+           
+                <div class="collapse navbar-collapse" id="navbarExample01">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>@Html.ActionLink("Logout", "Index", "0", new { @class = "glyphicon glyphicon-log-out" })</li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Navbar -->
+        <!-- Jumbotron -->
+        <div class="p-5 text-center bg-light">
+        </div>
+        <!-- Jumbotron -->
+    </header>
+
+
+    <div class="container-fluid">
+        <div class="row content">
+            <div class="col-sm-3 sidenav">
+                <ul class="nav nav-pills nav-stacked">
+                
+
+                <li>@Html.ActionLink("Home", "", "", new { @class = "active" })</li>
+                    <br />
+
+                    <li> @Html.ActionLink("Profile", "", "")</li>
+                    <br />
+                 <li>@Html.ActionLink("Create Post", "", "")</li>
+                    <br />
+                    <li>@Html.ActionLink("Posts", "", "")</li>
+                    <br />
+                    <li>@Html.ActionLink("Recieved Questions", "", "")</li>
+
+
+
+
+                </ul><br>
+
+            </div>
+
+            <div class="col-sm-9">
+                <h4><small>RECENT POSTS</small></h4>
+
+           
+
+
+</body>
+</html>
+
+
+
