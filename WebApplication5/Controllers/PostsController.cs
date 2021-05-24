@@ -32,7 +32,7 @@ namespace WebApplication5.Controllers
 
         public IEnumerable<Post> getpost()
         {
-            var customers = db.Posts.ToList();
+            var posts = db.Posts.ToList();
 
             return posts;
         }
