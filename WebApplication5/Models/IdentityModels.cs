@@ -34,7 +34,7 @@ namespace WebApplication5.Models
 
 
         public ApplicationDbContext()
-            : base("DefaultConnection")
+            : base("DefaultConnection", throwIfV1Schema: false)
         {
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<ApplicationDbContext,
          WebApplication5.Migrations.Configuration>("DefaultConnection"));
