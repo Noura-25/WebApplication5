@@ -283,6 +283,15 @@
     <Content Include="Views\Admin\Viewers.cshtml" />
     <Content Include="Views\Admin\Editors.cshtml" />
     <Content Include="Views\Shared\_layoutt.cshtml" />
+    <Content Include="Views\Admin\Posts.cshtml" />
+    <Content Include="Views\Admin\Details.cshtml" />
+    <Content Include="Views\Admin\Edit.cshtml" />
+    <Content Include="Views\Admin\AddPost.cshtml" />
+    <Content Include="Views\Admin\AddEditor.cshtml" />
+    <Content Include="Views\Admin\AddViewer.cshtml" />
+    <Content Include="Views\Admin\Admins.cshtml" />
+    <Content Include="Views\Admin\_AdminNav.cshtml" />
+    <Content Include="Views\Admin\PostRequest.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
