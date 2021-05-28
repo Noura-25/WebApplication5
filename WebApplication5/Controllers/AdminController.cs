@@ -12,9 +12,9 @@ namespace WebApplication5.Controllers
         ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Admin
-        /*public ActionResult AdminProfile(string username)
+        /*public ActionResult AdminProfile(int id)
         {
-            var admin = getAdmins().SingleOrDefault(c => c.username.Equals(username));
+            var admin = getAdmins().SingleOrDefault(c => c.ID == id );
             if (admin == null)
             {
                 return HttpNotFound();
@@ -109,9 +109,9 @@ namespace WebApplication5.Controllers
         }
         //Delete Viewer
         [HttpGet]
-        public ActionResult DeleteViewer(string username)
+        public ActionResult DeleteViewer(int id)
         {
-            var viewer = db.Viewers.Single(c => c.username == username);
+            var viewer = db.Viewers.Single(c => c.ID == id);
             db.Viewers.Remove(viewer);
             db.SaveChanges();
 
@@ -157,9 +157,9 @@ namespace WebApplication5.Controllers
         }
         //Delete Editor
         [HttpGet]
-        public ActionResult DeleteEditor(string username)
+        public ActionResult DeleteEditor(int id)
         {
-            var editor = db.Editors.Single(c => c.username == username);
+            var editor = db.Editors.Single(c => c.ID == id);
             db.Editors.Remove(editor);
             db.SaveChanges();
 
@@ -186,7 +186,7 @@ namespace WebApplication5.Controllers
             return posts;
         }
         //post details
-        public ActionResult Details(int id)
+        public ActionResult PostDetails(int id)
         {
             var post = getPosts().SingleOrDefault(c => c.post_id == id);
             if (post == null)
@@ -198,7 +198,7 @@ namespace WebApplication5.Controllers
         }
         //Edit post
         [HttpGet]
-        public ActionResult Edit(int id)
+        public ActionResult EditPost(int id)
         {
             var post = db.Posts.Single(c => c.post_id == id);
             
@@ -206,7 +206,7 @@ namespace WebApplication5.Controllers
         }
 
         [HttpPost]
-        public ActionResult Edit(Post post)
+        public ActionResult EditPost(Post post)
         {
             //validation
             try
@@ -241,7 +241,7 @@ namespace WebApplication5.Controllers
         [HttpGet]
         public ActionResult DeletePost(int id)
         {
-            var post = db.Posts.Single(c => c.post_id == id);
+            var post = getPosts().SingleOrDefault(c => c.post_id == id);
             db.Posts.Remove(post);
             db.SaveChanges();
 
@@ -266,10 +266,14 @@ namespace WebApplication5.Controllers
                 return View();
             }
         }
-        //Post's Request
+        //*******************************************************************
+        //*******************************************************************
+        //*******************************************************************
+
+        //List Post's Request
         public ActionResult PostRequest()
         {
-            var posts = getPosts().ToList();
+            var posts = getPosts().Where(y => y.Approve == null);
 
             return View(posts);
         }

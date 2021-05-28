@@ -16,8 +16,7 @@ namespace WebApplication5.Models
 
         public virtual Viewer Viewer { get; set; }
 
-        [StringLength(20)]
-        public string username_Viewer { get; set; }
+        public int ViewerID { get; set; }
 
         public virtual Post Post { get; set; }
 

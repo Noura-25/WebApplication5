@@ -6,6 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.Spatial;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 
 namespace WebApplication5.Models
 {
@@ -19,9 +20,12 @@ namespace WebApplication5.Models
         }
 
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int ID { get; set; }
+
         [StringLength(20)]
         [Required]
-
+        [Remote("IsExist", "Place", ErrorMessage = "username already exist!")]
         public string username { get; set; }
 
         [Required]
@@ -44,7 +48,6 @@ namespace WebApplication5.Models
         [DisplayName("Phone Number")]
         public int? PhoneNO { get; set; }
 
-        [Required]
         [StringLength(10)]
         public string Role { get; set; }
 

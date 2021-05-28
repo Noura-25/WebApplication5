@@ -22,15 +22,13 @@ namespace WebApplication5.Models
 
         public virtual Viewer Viewer { get; set; }
 
-        [StringLength(20)]
-        public string username_Viewer { get; set; }
+        public int ViewerID { get; set; }
 
         [Column("Reply", TypeName = "text")]
         public string Reply { get; set; }
 
         public virtual Editor Editor { get; set; }
 
-        [StringLength(20)]
-        public string username_Editor { get; set; }
+        public int EditorID { get; set; }
     }
 }

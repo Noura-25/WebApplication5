@@ -200,6 +200,10 @@
     <Compile Include="Migrations\202105240445535_p.Designer.cs">
       <DependentUpon>202105240445535_p.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105281903540_ay7aga.cs" />
+    <Compile Include="Migrations\202105281903540_ay7aga.Designer.cs">
+      <DependentUpon>202105281903540_ay7aga.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Admin.cs" />
@@ -280,18 +284,18 @@
     <Content Include="Views\Posts\View.cshtml" />
     <Content Include="Views\Posts\DisplayInfo.cshtml" />
     <Content Include="Views\Posts\Posts.cshtml" />
-    <Content Include="Views\Admin\Viewers.cshtml" />
-    <Content Include="Views\Admin\Editors.cshtml" />
     <Content Include="Views\Shared\_layoutt.cshtml" />
     <Content Include="Views\Admin\Posts.cshtml" />
-    <Content Include="Views\Admin\Details.cshtml" />
-    <Content Include="Views\Admin\Edit.cshtml" />
+    <Content Include="Views\Admin\PostDetails.cshtml" />
+    <Content Include="Views\Admin\EditPost.cshtml" />
     <Content Include="Views\Admin\AddPost.cshtml" />
-    <Content Include="Views\Admin\AddEditor.cshtml" />
-    <Content Include="Views\Admin\AddViewer.cshtml" />
     <Content Include="Views\Admin\Admins.cshtml" />
     <Content Include="Views\Admin\_AdminNav.cshtml" />
     <Content Include="Views\Admin\PostRequest.cshtml" />
+    <Content Include="Views\Admin\Editors.cshtml" />
+    <Content Include="Views\Admin\AddEditor.cshtml" />
+    <Content Include="Views\Admin\Viewers.cshtml" />
+    <Content Include="Views\Admin\AddViewer.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -327,6 +331,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105240445535_p.resx">
       <DependentUpon>202105240445535_p.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105281903540_ay7aga.resx">
+      <DependentUpon>202105281903540_ay7aga.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

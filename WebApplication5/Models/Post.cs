@@ -30,7 +30,6 @@ namespace WebApplication5.Models
         [StringLength(20)]
         public string ArticleTitle { get; set; }
 
-        [StringLength(20)]
         public string ArticleBody { get; set; }
 
         [Column(TypeName = "date")]

@@ -7,9 +7,7 @@
 
 <h2>Post's Request</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+
 <table class="table">
     <tr>
         <th>
@@ -36,9 +34,9 @@
             @Html.DisplayFor(modelItem => item.Approve)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.post_id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.post_id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.post_id })
+            @Html.ActionLink("Edit", "EditPost", new { id=item.post_id }) |
+            @Html.ActionLink("Details", "PostDetails", new { id=item.post_id }) |
+            @Html.ActionLink("Delete", "DeletePost", new { id=item.post_id })
         </td>
     </tr>
 }
