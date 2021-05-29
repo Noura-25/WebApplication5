@@ -1,23 +1,15 @@
-﻿@model IEnumerable<WebApplication5.Models.Editor>
+﻿@model IEnumerable<WebApplication5.Models.Admin>
 
 @{
-    ViewBag.Title = "Editors";
+    ViewBag.Title = "Admins";
     Layout = "~/Views/Admin/_AdminNav.cshtml";
 }
 
-<h2>Editors</h2>
+<h2>Admins</h2>
 
-<p>
-    @Html.ActionLink("Create New", "AddEditor")
-</p>
+
 <table class="table">
     <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.username)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Password)
-        </th>
         <th>
             @Html.DisplayNameFor(model => model.FirstName)
         </th>
@@ -31,22 +23,16 @@
             @Html.DisplayNameFor(model => model.PhoneNO)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Photo)
+            @Html.DisplayNameFor(model => model.Role)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.post_id)
+            @Html.DisplayNameFor(model => model.Photo)
         </th>
         <th></th>
     </tr>
 
 @foreach (var item in Model) {
     <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.username)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Password)
-        </td>
         <td>
             @Html.DisplayFor(modelItem => item.FirstName)
         </td>
@@ -60,14 +46,12 @@
             @Html.DisplayFor(modelItem => item.PhoneNO)
         </td>
         <td>
+            @Html.DisplayFor(modelItem => item.Role)
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.Photo)
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.post_id)
-        </td>
-        <td>
-            @Html.ActionLink("Delete", "DeleteEditor", new { id=item.ID })
-        </td>
+        
     </tr>
 }
 

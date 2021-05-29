@@ -55,9 +55,6 @@
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Microsoft.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.WebHelpers.3.2.7\lib\net45\Microsoft.Web.Helpers.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -121,12 +118,6 @@
     <Reference Include="Antlr3.Runtime">
       <Private>True</Private>
       <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="WebMatrix.Data, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.Data.3.2.7\lib\net45\WebMatrix.Data.dll</HintPath>
-    </Reference>
-    <Reference Include="WebMatrix.WebData, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.WebData.3.2.7\lib\net45\WebMatrix.WebData.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -209,6 +200,10 @@
     <Compile Include="Migrations\202105240445535_p.Designer.cs">
       <DependentUpon>202105240445535_p.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105281903540_ay7aga.cs" />
+    <Compile Include="Migrations\202105281903540_ay7aga.Designer.cs">
+      <DependentUpon>202105281903540_ay7aga.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Admin.cs" />
@@ -286,18 +281,21 @@
     <Content Include="Views\Shared\_navbar.cshtml" />
     <Content Include="Views\User\test.cshtml" />
     <Content Include="Views\Posts\AddPosts.cshtml" />
+    <Content Include="Views\Posts\View.cshtml" />
     <Content Include="Views\Posts\DisplayInfo.cshtml" />
     <Content Include="Views\Posts\Posts.cshtml" />
-    <Content Include="Views\Admin\Viewers.cshtml" />
-    <Content Include="Views\Admin\Editors.cshtml" />
     <Content Include="Views\Shared\_layoutt.cshtml" />
-    <Content Include="Views\Posts\Details.cshtml" />
-    <Content Include="Views\Posts\Main.cshtml" />
-    <Content Include="Views\Posts\viewerPage.cshtml" />
-    <Content Include="Views\Posts\comment.cshtml" />
-    <Content Include="ViewPage1.cshtml" />
-    <Content Include="Views\Shared\_login.cshtml" />
-    <Content Include="Views\Shared\_navbareditor.cshtml" />
+    <Content Include="Views\Admin\Posts.cshtml" />
+    <Content Include="Views\Admin\PostDetails.cshtml" />
+    <Content Include="Views\Admin\EditPost.cshtml" />
+    <Content Include="Views\Admin\AddPost.cshtml" />
+    <Content Include="Views\Admin\Admins.cshtml" />
+    <Content Include="Views\Admin\_AdminNav.cshtml" />
+    <Content Include="Views\Admin\PostRequest.cshtml" />
+    <Content Include="Views\Admin\Editors.cshtml" />
+    <Content Include="Views\Admin\AddEditor.cshtml" />
+    <Content Include="Views\Admin\Viewers.cshtml" />
+    <Content Include="Views\Admin\AddViewer.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -333,6 +331,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105240445535_p.resx">
       <DependentUpon>202105240445535_p.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105281903540_ay7aga.resx">
+      <DependentUpon>202105281903540_ay7aga.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
