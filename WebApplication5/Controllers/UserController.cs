@@ -81,7 +81,7 @@ namespace WebApplication5.Controllers
                 {
                     ModelState.Clear();
                     ViewBag.SuccessMessage = "Login successful";
-                    return RedirectToAction("viewerlayout");
+                    return RedirectToAction("viewerPage", "Posts");
 
                 }
             }
@@ -130,7 +130,7 @@ namespace WebApplication5.Controllers
         {
             Session.Abandon();
             return RedirectToAction("Index");
-            return View("Login");
+            return View("Main");
         }
 
     }
