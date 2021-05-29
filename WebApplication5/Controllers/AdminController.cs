@@ -277,5 +277,11 @@ namespace WebApplication5.Controllers
 
             return View(posts);
         }
+        /*public ActionResult PostRequest()
+        {
+            var posts = getPosts().Where(y => y.Approve == null);
+
+            return View(posts);
+        }*/
     }
 }
