@@ -11,7 +11,7 @@ namespace WebApplication5.Models
     public class Favorite
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int fav_id { get; set; }
 
         public virtual Viewer Viewer { get; set; }

@@ -1,0 +1,34 @@
+﻿@{
+    Page.Title = "Image Upload using WebImage Helper";
+    Layout = "~/_SiteLayout.cshtml";
+    var path = "";
+    if (IsPost)
+    {
+        WebImage photo = WebImage.GetImageFromRequest();
+        if (photo != null)
+        {
+            var imgname = Path.GetFileName(photo.FileName);
+            path = @"Uploads\" + imgname;
+            photo.Save(@"~\" + path);
+        }
+    }
+}
+
+<div>
+    <h1>Upload Image</h1>
+    <form action="" method="post" enctype="multipart/form-data">
+        <fieldset>
+            <legend> Upload Image </legend>
+            <label for="Image">Image</label>
+            <input type="file" name="Image" />
+            <br />
+            <input type="submit" value="Submit" />
+        </fieldset>
+    </form>
+    @if (path != "")
+    {
+        <div class="result">
+            <img src="@path" alt="Thumbnail image" />
+        </div>
+    }
+</div>
