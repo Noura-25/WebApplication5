@@ -10,16 +10,14 @@
 <div class="container">
 
     <br />
-
+    @Html.Partial("_navbareditor")
     <label> Search</label>
     <div style="display:flex;">
         <input type="text" , id="Search" placeholder="Search by:Type,Date,Body" class="form-control" />
         <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
     </div>
 
-    <p>
-        @Html.ActionLink("Create New", "AddPosts")
-    </p>
+  
     <table class="table">
         <tr>
 
@@ -49,58 +47,56 @@
 
         @foreach (var item in Model)
         {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.post_id)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ArticleTitle)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ArticleBody)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Date)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.image)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Type)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id = item.post_id }) |
-            @Html.ActionLink("Details", "Details", new { id = item.post_id }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.post_id })
-        </td>
-    </tr>
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.post_id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ArticleTitle)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ArticleBody)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.image)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Type)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.post_id }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.post_id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.post_id })
+                </td>
+            </tr>
         }
 
     </table>
     <script src="~/Scripts/jquery-3.4.1.min.js"></script>
     <script>
-    $("#Search").on("keyup", function () {
-        var textSearch = $(this).val();
-        $("table tr").each(function (results) {
-            if (results != 0)
-            {
-                var Type = $(this).find("td:nth-child(6)").text();
-                var Date= $(this).find("td:nth-child(4)").text();
-                var ArticleBody = $(this).find("td:nth-child(3)").text();
-                if (Type.indexOf(textSearch) !== 0 && Type.toLowerCase().indexOf(textSearch.toLowerCase()) < 0
-                    && Date.indexOf(textSearch) !== 0 && Date.toLowerCase().indexOf(textSearch.toLowerCase()) < 0
-                    && ArticleBody.indexOf(textSearch) !== 0 && ArticleBody.toLowerCase().indexOf(textSearch.toLowerCase()) < 0) {
-                    $(this).hide();
-                }
-                else
-                {
-                    $(this).show();
-                }
+        $("#Search").on("keyup", function () {
+            var textSearch = $(this).val();
+            $("table tr").each(function (results) {
+                if (results != 0) {
+                    var Type = $(this).find("td:nth-child(6)").text();
+                    var Date = $(this).find("td:nth-child(4)").text();
+                    var ArticleBody = $(this).find("td:nth-child(3)").text();
+                    if (Type.indexOf(textSearch) !== 0 && Type.toLowerCase().indexOf(textSearch.toLowerCase()) < 0
+                        && Date.indexOf(textSearch) !== 0 && Date.toLowerCase().indexOf(textSearch.toLowerCase()) < 0
+                        && ArticleBody.indexOf(textSearch) !== 0 && ArticleBody.toLowerCase().indexOf(textSearch.toLowerCase()) < 0) {
+                        $(this).hide();
+                    }
+                    else {
+                        $(this).show();
+                    }
 
 
-            }
+                }
+            });
         });
-    });
 
 
 

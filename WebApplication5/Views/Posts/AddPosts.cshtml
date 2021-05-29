@@ -9,7 +9,7 @@
 @using (Html.BeginForm("AddPosts", "Posts", FormMethod.Post))
 {
     @Html.AntiForgeryToken()
-    
+    @Html.Partial("_navbareditor")
 <div class="form-horizontal">
     <h4>Post</h4>
     <hr />
@@ -89,5 +89,4 @@
 }
     
 <div>
-    @Html.ActionLink("Back to List", "Index")
 </div>

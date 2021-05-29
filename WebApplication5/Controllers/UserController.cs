@@ -130,7 +130,7 @@ namespace WebApplication5.Controllers
         {
             Session.Abandon();
             return RedirectToAction("Index");
-            return View("Login");
+            return View("Main");
         }
 
     }

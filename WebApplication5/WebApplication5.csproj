@@ -297,6 +297,7 @@
     <Content Include="Views\Posts\comment.cshtml" />
     <Content Include="ViewPage1.cshtml" />
     <Content Include="Views\Shared\_login.cshtml" />
+    <Content Include="Views\Shared\_navbareditor.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

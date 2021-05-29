@@ -1,0 +1,22 @@
+﻿@*<center>
+    <table border="1">
+        <tr>
+            <th>
+                ArticleTitle
+            </th>
+            <th>
+                ArticleBody
+            </th>
+            <th>
+                Type
+            </th>
+        </tr>
+        @foreach (var item in ViewData["jointable"] as IEnumerable<WebApplication5.Models.savedposts>)
+        {
+             
+    <td>@Html.DisplayFor(modelItem => item.postlist )</td>
+    <td>@Html.DisplayFor(modelItem => item.postlist)</td>
+
+        }
+    </table>
+</center>*@

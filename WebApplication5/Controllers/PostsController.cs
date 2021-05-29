@@ -83,21 +83,28 @@ namespace WebApplication5.Controllers
 
         public ActionResult comment(Question question, int id)
         {
-            var details = db.Questions.FirstOrDefault(c => c.post_id == id);
+            //var details = db.Questions.FirstOrDefault(c => c.post_id == id);
 
-            if (details == null)
-            {
-                return RedirectToAction("Main");
-            }
-            else
-            {
-                question.post_id = id;
-                db.Questions.Add(question);
+            //if (details == null)
+            //{
+            //    return RedirectToAction("Main");
+            //}
+            //else
+            //{
+            //    question.post_id = id;
+
+            //    db.Questions.Add(question);
+            //    db.SaveChanges();
+            //    return View("viewerpage");
+            
+                var details = getpost().SingleOrDefault(c => c.post_id == id);
+            question.post_id = id;
+            db.Questions.Add(question);
                 db.SaveChanges();
                 return View();
 
             }
-        }
+        
         public ActionResult save(int id)
         {
             var saved = new Favorite();
@@ -109,6 +116,7 @@ namespace WebApplication5.Controllers
             else
             {
                 saved.post_id = id;
+                ViewBag.SuccessMessage = "Post Saved";
                 db.Favorites.Add(saved);
                 db.SaveChanges();
                 return RedirectToAction("viewerPage");

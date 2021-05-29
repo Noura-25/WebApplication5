@@ -26,7 +26,7 @@
                 <ul class="nav navbar-nav navbar-right">
                  
                     <li>@Html.ActionLink("SavedPosts", "", "")</li>
-                    <li>@Html.ActionLink("Logout", "Index", "0", new { @class = "glyphicon glyphicon-log-out" })</li>
+                    <li>@Html.ActionLink("Logout", "Main", "User", new { @class = "glyphicon glyphicon-log-out" })</li>
                 </ul>
             </div>
 
@@ -114,6 +114,7 @@
     }
 
 </table>
+
 <script src="~/Scripts/jquery-3.4.1.min.js"></script>
 <script>
     $("#Search").on("keyup", function () {
